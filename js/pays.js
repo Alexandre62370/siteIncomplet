@@ -18,11 +18,17 @@ class Country{
     }
 }
 
+// var countrySearch = document.forms['myForm']['name'];  
+
 let countries = [];
 
-var countrySearch = document.forms['myForm']['name'];  
+function test(){
+    console.log(document.getElementById('countrySearch').value); // fonctionne mais ne l'affiche qu'une fraction de seconde dans la console
+}
 
-async function getCountries(countrySearch){
+async function getCountries(){
+    var countrySearch = document.getElementById('countrySearch').value;
+
     countries = [];
     try{
         if(countrySearch != ""){
